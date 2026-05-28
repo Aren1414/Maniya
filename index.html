@@ -16,7 +16,6 @@
 </head>
 <body>
 
-<!-- آهنگ -->
 <audio id="bgm" preload="auto">
   <source src="https://github.com/Aren1414/Maniya/releases/download/V1/Instagram.SalamAlekoum.320.mp3" type="audio/mpeg">
 </audio>
@@ -34,12 +33,15 @@
 </div>
 
 <script>
-  window.addEventListener("load", () => {
+  document.addEventListener("click", () => {
     const audio = document.getElementById("bgm");
-    setTimeout(() => {
-      audio.play().catch(() => {});
-    }, 2000);
-  });
+    audio.play().catch(() => {});
+  }, { once: true });
+
+  document.addEventListener("touchstart", () => {
+    const audio = document.getElementById("bgm");
+    audio.play().catch(() => {});
+  }, { once: true });
 </script>
 
 </body>
