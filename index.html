@@ -15,6 +15,10 @@
 </style>
 </head>
 <body>
+
+<!-- آهنگ -->
+<audio id="bgm" src="https://raw.githubusercontent.com/Aren1414/Maniya/main/Instagram%20SalamAlekoum%20320.mp3" preload="auto"></audio>
+
 <div class="container">
   <div class="top">
     <img src="https://raw.githubusercontent.com/Aren1414/Maniya/main/Maniya.png" alt="banner">
@@ -26,5 +30,15 @@
     <a href="https://github.com/Aren1414/Maniya/releases/download/V1/NPV.apk">دانلود NapsternetV</a>
   </div>
 </div>
+
+<script>
+  window.addEventListener("load", () => {
+    const audio = document.getElementById("bgm");
+    setTimeout(() => {
+      audio.play().catch(() => {});
+    }, 2000);
+  });
+</script>
+
 </body>
 </html>
